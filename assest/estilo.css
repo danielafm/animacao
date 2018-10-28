@@ -1,0 +1,159 @@
+.wrap{
+    display: flex;
+    flex-flow: row wrap; /*mesma coisa que colocar o flex direction e o wrap*/
+    justify-content: center;  
+    width: 90vw;
+    /*font-size: 1em = serve para a responsividade de fontes, 
+    onde pega o tamanho de fonte padrao do dispositivo e adequa ele*/
+    
+    margin: 30px auto; /*define um padrao a todas as margens usando como base o dispositivo em que o site esta sendo aberto*/
+}
+
+.box{
+    color: #ffffff;
+    background: #ddd;
+    width: 20%;
+    line-height: 100px; /*configura o tamanho, neste caso altura da linha*/
+    margin: 20px 20px;
+    cursor: pointer;
+    text-align: center;
+}
+
+.red{
+   background: rgba(139,0,0,0.5);
+}
+
+.scaleX{
+    transform: scaleX(1); /*trabalha com o eixo X*/
+    transition: transform 1s ease;
+}
+
+.box:hover .scaleX{
+    transform: scaleX(2);
+}
+
+.scaleY{
+    transform: scaleY(1); /*trabalha com o eixo Y*/
+    transition: transform 1s linear;
+}
+
+.box:hover .scaleY{
+    transform: scaleY(2);
+}
+
+.scale{
+    transform: scale(1); /*trabalha com o eixo X e Y*/
+    transition: transform 1s linear;
+}
+
+.box:hover .scale{
+    transform: scale(2);
+}
+
+.skewX{
+    transform: skewX(1); /*deixar o objeto tordo apartir de seu topo*/
+    transition: transform 0.5s linear;
+}
+
+.box:hover .skewX{
+    transform: skewX(-10deg);
+}
+
+.skewY{
+    transform: skewY(10deg); /*deixar o objeto tordo apartir de sua lateral*/
+    /* unidade de medida deg e usada para angulos do objeto */
+    transition: transform 0.1s linear;
+}
+
+.box:hover .skewY{
+    transform: skewY(-10deg);
+}
+
+.skew{
+    transform: skew(1,1); /*deixar o objeto tordo apartir de sua lateral*/
+    /* unidade de medida deg e usada para angulos do objeto */
+    transition: transform 0.1s linear;
+}
+
+.box:hover .skew{
+    transform: skew(-20deg, 20deg);
+}
+
+.translateX{ /*mover elemento de um lado ao outro*/
+    transform: translateX(1); 
+    transition: transform 0.1s linear;
+}
+
+.box:hover .translateX{
+    transform: translateX(2em); /*usar EM por conta da responsividade*/
+}
+
+
+.translateY{ /*mover elemento de um lado ao outro*/
+    transform: translateX(1); 
+    transition: transform 0.1s linear;
+}
+
+.box:hover .translateY{
+    transform: translateY(2em); 
+}
+
+.translate{ /*mover elemento de um lado ao outro*/
+    transform: translate(1,1); 
+    transition: transform 0.1s linear;
+}
+
+.box:hover .translate{
+    transform: translate(2em,2em); 
+}
+
+.matrix{
+    transform: matrix(1,1,1,1); 
+    transition: transform 0.1s linear;
+}
+
+.box:hover .matrix{
+    transform: matrix(1,-1,1,1,0,0); 
+}
+
+ /*matrix(a,b,c,d,e,f)
+ ab = scale XY
+ cd = skrew XY
+ ef = translate XY
+ */
+
+ .rotate{
+    transform: rotate(1,1); 
+    transition: transform 0.1s linear;
+}
+
+.box:hover .rotate{
+    transform: rotate(180deg); 
+}
+
+/* ------------------------------------------------ */
+.bolinhas{
+    padding: 3%;
+    margin: 5%;
+    border-radius: 60%;
+    cursor: pointer;
+}
+
+.wrap:hover .bolinhas{
+    transform: scale(2);
+}
+
+.bolinhas:nth-child(1){
+    background-color: green;
+    transition: 300ms;
+}
+
+.bolinhas:nth-child(2){
+    background-color: yellow;
+    transition: 1s;
+}
+
+.bolinhas:nth-child(3){
+    background-color: rebeccapurple;
+    transition: 3s;
+}
